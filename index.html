@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WebStore</title>
+	<link rel="shortcut icon" href="/img/ico/favication.ico">
+	<link rel="stylesheet" href="style.min.css">
+</head>
+
+<body>
+	<div class="Wrapper">
+		<div class="WishBox">
+			<h1 class="WishBox__title">Избранное</h1>
+			<div class="Product__delete Product__delete--closeWishBox"></div>
+			<ul class="WishBox__list"></ul>
+		</div>
+		<header class="Header">
+			<div class="Container">
+				<nav class="Header__nav">
+					<ul class="Nav__list">
+						<li class="Nav__item">
+							<a href="/index.html" class="Nav__link">
+								<img class="Logo" src="img/dest/logo.png" alt="Logo">
+							</a>
+							<ul class="Nav__sub__List">
+								<li class="Nav__sub__Item Nav__sub__Item--categories">
+									<div class="Nav__link Nav__link--arrow">Категории</div>
+									<ul class="Categories__list js-headerCategories">
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Компьютеры</a>
+										</li>
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+										</li>
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+										</li>
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+										</li>
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+										</li>
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+										</li>
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+										</li>
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+										</li>
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+										</li>
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+										</li>
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+										</li>
+										<li class="Categories__item">
+											<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+										</li>
+									</ul>
+								</li>
+								<li class="Nav__sub__Item">
+									<a href="layouts/about.html" class="Nav__link">
+										О нас
+									</a>
+								</li>
+								<li class="Nav__sub__Item">
+									<a href="layouts/contact.html" class="Nav__link">
+										Обратная связь
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Nav__item">
+							<ul class="Nav__icon__List">
+								<li class="Nav__icon__Item Nav__icon__Item--search">
+									<input class="search" name="search" type="search">
+									<span class="search__icon"></span>
+								</li>
+								<li class="Nav__icon__Item Nav__icon__Item--profile">
+									<ul class="Profile__list Profile__list--unAuth">
+										<li class="Profile__item Profile__item--auth">
+											<div class="authTitle">
+												<a class="authLink login" href="layouts/login.html">Войти</a>
+											</div>
+											<div class="authTitle">
+												<a class="authLink signUp" href="layouts/signUp.html">Регистрация</a>
+											</div>
+										</li>
+										<li class="Profile__item">Мои заказы</li>
+										<li class="Profile__item Profile__item--wish">Избранное</li>
+										<li class="Profile__item">Центр сообщений</li>
+									</ul>
+									<ul class="Profile__list Profile__list--auth">
+										<li class="Profile__item Profile__item--greeting">
+											<div>Добро пожаловать</div>
+											<div class="user__name">Рустам</div>
+										</li>
+										<li class="Profile__item">Мои заказы</li>
+										<li class="Profile__item Profile__item--wish">Избранное</li>
+										<li class="Profile__item">Центр сообщений</li>
+									</ul>
+								</li>
+								<li class="Nav__icon__Item Nav__icon__Item--like">
+									<span class="Nav__icon">
+										<span class="Like__inc">0</span>
+									</span>
+								</li>
+								<li class="Nav__icon__Item Nav__icon__Item--cart">
+									<span class="Nav__icon">
+										<span class="Cart__inc">2</span>
+									</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="Header__slider">
+					<ul class="Slider__list">
+						<li class="Slider__item Slider__item--active">
+							<div class="Slider__product">
+								<img class="Product__img" src="img/misc/product.png" alt="product">
+							</div>
+							<div class="Slider__text">
+								<h1 class="Slider__text__Title">Полная сборка 1</h1>
+								<h1 class="Slider__text__Title">Цена = качества</h1>
+								<h1 class="Slider__text__Title">Акция</h1>
+								<div class="Slider__text__Desc">Успей купить по выгодной цене.</div>
+								<button class="Slider__text__Btn">Подробнее</button>
+							</div>
+						</li>
+						<li class="Slider__item">
+							<div class="Slider__product">
+								<img class="Product__img" src="img/misc/product.png" alt="product">
+							</div>
+							<div class="Slider__text">
+								<h1 class="Slider__text__Title">Полная сборка 2</h1>
+								<h1 class="Slider__text__Title">Цена = качества</h1>
+								<h1 class="Slider__text__Title">Акция</h1>
+								<div class="Slider__text__Desc">Успей купить по выгодной цене.</div>
+								<button class="Slider__text__Btn">Подробнее</button>
+							</div>
+						</li>
+						<li class="Slider__item">
+							<div class="Slider__product">
+								<img class="Product__img" src="img/misc/product.png" alt="product">
+							</div>
+							<div class="Slider__text">
+								<h1 class="Slider__text__Title">Полная сборка 3</h1>
+								<h1 class="Slider__text__Title">Цена = качества</h1>
+								<h1 class="Slider__text__Title">Акция</h1>
+								<div class="Slider__text__Desc">Успей купить по выгодной цене.</div>
+								<button class="Slider__text__Btn">Подробнее</button>
+							</div>
+						</li>
+						<li class="Slider__item">
+							<div class="Slider__product">
+								<img class="Product__img" src="img/misc/product.png" alt="product">
+							</div>
+							<div class="Slider__text">
+								<h1 class="Slider__text__Title">Полная сборка 4</h1>
+								<h1 class="Slider__text__Title">Цена = качества</h1>
+								<h1 class="Slider__text__Title">Акция</h1>
+								<div class="Slider__text__Desc">Успей купить по выгодной цене.</div>
+								<button class="Slider__text__Btn">Подробнее</button>
+							</div>
+						</li>
+						<li class="Slider__item">
+							<div class="Slider__product">
+								<img class="Product__img" src="img/misc/product.png" alt="product">
+							</div>
+							<div class="Slider__text">
+								<h1 class="Slider__text__Title">Полная сборка 5</h1>
+								<h1 class="Slider__text__Title">Цена = качества</h1>
+								<h1 class="Slider__text__Title">Акция</h1>
+								<div class="Slider__text__Desc">Успей купить по выгодной цене.</div>
+								<button class="Slider__text__Btn">Подробнее</button>
+							</div>
+						</li>
+					</ul>
+					<div class="ProgressBar">
+						<div class="ProgressLine"></div>
+					</div>
+					<div class="Slider__dots">
+						<div class="Slider__dot Slider__dot--active"></div>
+						<div class="Slider__dot"></div>
+						<div class="Slider__dot"></div>
+						<div class="Slider__dot"></div>
+						<div class="Slider__dot"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="PopularItems">
+			<div class="Container">
+				<h1 class="PopularItems__title">Популярные товары</h1>
+				<ul class="CatalogList">
+					<li class="Catalog__item" id="1">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.1</div>
+							<div class="Item__price">1000 р</div>
+							<a href="layouts/product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="2">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.2</div>
+							<div class="Item__price">1000 р</div>
+							<a href="layouts/product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="3">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.2</div>
+							<div class="Item__price">1000 р</div>
+							<a href="layouts/product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="4">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.2</div>
+							<div class="Item__price">1000 р</div>
+							<a href="layouts/product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="NewItems">
+			<div class="Container">
+				<h1 class="NewsItems__title">Новые товары</h1>
+				<ul class="CatalogList">
+					<li class="Catalog__item" id="5">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.1</div>
+							<div class="Item__price">1000 р</div>
+							<a href="layouts/product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="6">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.2</div>
+							<div class="Item__price">1000 р</div>
+							<a href="layouts/product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="7">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.2</div>
+							<div class="Item__price">1000 р</div>
+							<a href="layouts/product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="8">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.2</div>
+							<div class="Item__price">1000 р</div>
+							<a href="layouts/product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<footer class="Footer">
+		<div class="Footer__advantages">
+			<div class="Container">
+				<ul class="Advantages__list">
+					<li class="Advantages__item Delivery">
+						<h2 class="Advantages__title">Lorem</h2>
+						<div class="Atvantages__desc">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum sit laboriosam
+						</div>
+					</li>
+					<li class="Advantages__item Returns">
+						<h2 class="Advantages__title">Lorem</h2>
+						<div class="Atvantages__desc">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum sit laboriosam
+						</div>
+					</li>
+					<li class="Advantages__item WhiteChose">
+						<h2 class="Advantages__title">Lorem</h2>
+						<div class="Atvantages__desc">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum sit laboriosam
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="Footer__information">
+			<div class="Container">
+				<div class="Footer__information__Box">
+					<div class="Footer__information__Categories">
+						<h2 class="Footer__information__title">Категории</h2>
+						<ul class="Categories__list">
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+							<li class="Categories__item">
+								<a class="Item__link" href="layouts/catalog.html">Lorem</a>
+							</li>
+						</ul>
+					</div>
+					<div class="Footer__information__About">
+						<h2 class="Footer__information__title">О нас</h2>
+						<ul class="About__list">
+							<li class="About__item">
+								<a class="Item__link" href="#">Lorem</a>
+							</li>
+							<li class="About__item">
+								<a class="Item__link" href="#">Lorem</a>
+							</li>
+							<li class="About__item">
+								<a class="Item__link" href="#">Lorem</a>
+							</li>
+							<li class="About__item">
+								<a class="Item__link" href="#">Lorem</a>
+							</li>
+						</ul>
+					</div>
+					<div class="Footer__information__Contacts">
+						<h2 class="Footer__information__title">Контакты</h2>
+						<ul class="Contacts__list">
+							<li class="Contacts__item">
+								<a class="Item__link" href="#">Lorem</a>
+							</li>
+							<li class="Contacts__item">
+								<a class="Item__link" href="#">Lorem</a>
+							</li>
+							<li class="Contacts__item">
+								<a class="Item__link" href="#">Lorem</a>
+							</li>
+							<li class="Contacts__item">
+								<a class="Item__link" href="#">Lorem</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="Footer__bottom">
+			<div class="Copyright">&#169; 2019 Lorem</div>
+			<ul class="SocialList">
+				<li class="Social__item vk"></li>
+				<li class="Social__item in"></li>
+				<li class="Social__item tg"></li>
+			</ul>
+		</div>
+	</footer>
+	<script src="/js/plugins/JQuery.js"></script>
+	<script src="/js/common-min.js"></script>
+	<script src="/js/Header__slider-min.js"></script>
+</body>
+
+</html>

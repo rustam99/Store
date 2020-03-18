@@ -1,0 +1,213 @@
+.Login {
+	background-color: $overlayColor;
+    text-align: center;
+    border-radius: 0 0 100px 100px;
+    padding: 0 0 50px 0;
+}
+
+.Login__title {
+    color: $white;
+    font-size: 48px;
+    position: relative;
+    display: inline-block;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 500px;
+        height: 2px;
+        background-color: #c0b7e4;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &:before {
+        left: 100%;
+        margin-left: 20px;
+    }
+    &:after {
+        right: 100%;
+        margin-right: 20px;
+    }
+}
+
+.Login__box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.Login__form {
+	width: 50%;
+	text-align: left;
+	border-right: 2px solid $white;
+	form {
+		margin-top: 30px;
+	}
+}
+
+.Login__form__Title {
+	color: $white;
+}
+
+.Login__email,
+.Login__password {
+	width: 70%;
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
+		margin-right: 20px;
+		width: 18px;
+		height: 18px;
+		background-image: url(img/dest/login__icon__set.png);
+	}
+	&:hover {
+		.Login__input {
+			border-color: $hoverColor;
+		}
+		&:after {
+			background-image: url(img/dest/login__icon__set__hover.png);
+		}
+	}
+}
+
+.Login__password:after {
+	background-position-x: -20px;
+}
+
+.Login__password {
+	margin-top: 20px;
+}
+
+.Login__input {
+	width: calc(100% - 40px);
+	height: 40px;
+	background: none;
+	border: 1px solid $white;
+	border-radius: 20px;
+	color: $white;
+	font-weight: bold;
+	padding: 0 20px;
+	font-size: 16px;
+	outline: none;
+}
+
+.Login__remember {
+	display: inline-flex;
+	align-items: center;
+	margin-top: 20px;
+	cursor: pointer;
+	input {
+		display: none;
+	}
+	input:checked + .CustomCheckbox:after {
+		display: block;
+	}
+	span {
+		margin-left: 10px;
+		color: $white;
+	}
+}
+
+.Login__btn {
+	display: block;
+	width: 150px;
+	height: 40px;
+	margin-top: 20px;
+	border: 1px solid $white;
+	border-radius: 20px;
+	background: none;
+	color: $white;
+	outline: none;
+	transition: all .2s;
+	&:hover {
+		border-color: $hoverColor;
+	}
+}
+
+.Login__forgot {
+	margin-top: 20px;
+	color: $white;
+	a {
+		text-decoration: none;
+		color: $blue;
+	}
+	span {
+		margin-right: 10px;
+	}
+
+	.Separator {
+		margin-right: 0;
+	}
+	
+}
+
+.Separator {
+	padding: 0 10px;
+	color: $white;
+	cursor: default;
+}
+
+.Login__info {
+	width: 40%;
+	text-align: left;
+}
+
+.Login__info__Box {
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		margin-left: -45px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background-color: $black;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		margin-left: -36px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 18px;
+		height: 18px;
+		background-image: url(img/dest/login__icon__set.png);
+	}
+}
+
+.Login__info__Box--key:after {
+	background-position-x: -40px;
+}
+
+.Login__info__Box--lock:after {
+	background-position-x: -80px;
+}
+
+.Login__info__Box--question:after {
+	background-position-x: -60px;
+}
+
+.Login__info__Box + .Login__info__Box {
+	margin-top: 20px;
+}
+
+.Login__info__Title {
+	color: $white;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.Login__Link {
+	color: $blue;
+	text-decoration: none;
+	&:hover {
+		color: $hoverColor;
+	}
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Карточка товара</title>
+	<link rel="shortcut icon" href="../img/ico/favication.ico">
+	<link rel="stylesheet" href="../style.min.css">
+</head>
+
+<body>
+<div class="Wrapper">
+	<div class="Product">
+		<div class="Container">
+			<h1 class="Product__title"></h1>
+			<div class="Product__box">
+				<div class="Product__desc">
+					<div class="Product__view">
+						<div class="Product__view__Box">
+							<img class="Product__img" src="" alt="product">
+						</div>
+						<ul class="Product__view__List">
+							<li class="Product__view__Item" data-productActive>
+								<img class="Product__img" src="../img/misc/product.png" alt="prodcut">
+							</li>
+							<li class="Product__view__Item">
+								<img class="Product__img" src="../img/misc/product2.png" alt="prodcut">
+							</li>
+							<li class="Product__view__Item">
+								<img class="Product__img" src="../img/misc/product.png" alt="prodcut">
+							</li>
+							<li class="Product__view__Item">
+								<img class="Product__img" src="../img/misc/product2.png" alt="prodcut">
+							</li>
+							<li class="Product__view__Item">
+								<img class="Product__img" src="../img/misc/product.png" alt="prodcut">
+							</li>
+						</ul>
+					</div>
+					<div class="Product__configuration">
+						<h1 class="Product__price"></h1>
+						<div class="Product__color">
+							<div class="CurrentColor">
+								<span class="ColorCircle"></span>
+								<span class="ColorName">Черный</span>
+								<span class="ChooseElem"></span>
+							</div>
+							<ul class="ColorList">
+								<li class="ColorItem">
+									<span class="ColorCircle"></span>
+									<span class="ColorName">Черный</span>
+								</li>
+								<li class="ColorItem">
+									<span class="ColorCircle"></span>
+									<span class="ColorName">Красный</span>
+								</li>
+								<li class="ColorItem">
+									<span class="ColorCircle"></span>
+									<span class="ColorName">Синий</span>
+								</li>
+								<li class="ColorItem">
+									<span class="ColorCircle"></span>
+									<span class="ColorName">Зеленый</span>
+								</li>
+								<li class="ColorItem">
+									<span class="ColorCircle"></span>
+									<span class="ColorName">Желтый</span>
+								</li>
+							</ul>
+						</div>
+						<div class="Product__quantity">
+							<span class="minus">&minus;</span>
+							<span class="result">
+									<input class="result__input" type="number" value="1">
+								</span>
+							<span class="plus">+</span>
+						</div>
+						<button type="submit" class="Product__btn">Добавить</button>
+						<div class="Product__configuration__Desc">
+								<span>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsam
+									consequuntur iusto
+									soluta accusantium doloremque aliquid cum distinctio, eveniet rem
+									iure fugit odit dicta
+									sapiente consectetur maxime quisquam minima ullam.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsam
+									consequuntur iusto
+									soluta accusantium doloremque aliquid cum distinctio, eveniet rem
+									iure fugit odit dicta
+									sapiente consectetur maxime quisquam minima ullam.
+								</span>
+							<div class="more">Подробнее</div>
+						</div>
+					</div>
+				</div>
+				<div class="Product__additionalDesc">
+					<h2 class="AdditionalDesc__title AdditionalDesc__title--active">Описание</h2>
+					<h2 class="AdditionalDesc__title">Дополнительная информация</h2>
+					<h2 class="AdditionalDesc__title">Отзывы
+						<span class="AmountReviews"></span>
+					</h2>
+					<div class="AdditionalDesc__text">
+						<!-- Content -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/js/plugins/JQuery.js"></script>
+<script src="/js/common-min.js"></script>
+<script src="/js/product__card-min.js"></script>
+</body>
+
+</html>

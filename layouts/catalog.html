@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="shortcut icon" href="../img/ico/favication.ico">
+	<link rel="stylesheet" href="../style.min.css">
+</head>
+
+<body>
+	<div class="Wrapper">
+		<div class="Catalog">
+			<div class="Container">
+				<h1 class="Catalog__title">Компьютеры</h1>
+				<div class="Catalog__controlers">
+					<div class="Catalog__filter">
+						<span class="Catalog__filter__text">Фильтр</span>
+						<ul class="Filter__list">
+							<li class="Filter__item">
+								<div class="Filter__text">
+									<span data-filter="price">Цена</span>
+								</div>
+								<div class="PriceSettings">
+									<div class="PriceFrom">
+										<label>От<input class="PriceInput" type="number"></label>
+									</div>
+									<div class="PriceTo">
+										<label>До<input class="PriceInput" type="number"></label>
+									</div>
+								</div>
+								<div class="PriceRange">
+									<div class="PriceCircle">
+										<div class="currentPrice"></div>
+									</div>
+									<div class="maxPrice">38000</div>
+								</div>
+							</li>
+							<li class="Filter__item">
+								<div class="Filter__text">
+									<span data-filter="brand">Производитель</span>
+								</div>
+								<ul class="BrandList">
+									<li class="BrandItem">
+										<label class="js--ChooseAll">
+											<input class="BrandCheckbox--first" type="checkbox">
+											<span class="CustomCheckbox--first"></span>
+											<div class="BrandName">Все производители</div>
+										</label>
+									</li>
+									<li class="BrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">Acer</div>
+										</label>
+									</li>
+									<li class="BrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">Apple</div>
+										</label>
+									</li>
+									<li class="BrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">DEXP</div>
+										</label>
+									</li>
+									<li class="BrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">HP</div>
+										</label>
+									</li>
+									<li class="BrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">Dell</div>
+										</label>
+									</li>
+									<li class="BrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">Lenovo</div>
+										</label>
+									</li>
+								</ul>
+								<ul class="BrandList--hide">
+									<li class="BrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">Lorem</div>
+										</label>
+									</li>
+									<li class="BrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">Acer</div>
+										</label>
+									</li>
+									<li class="BrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">Apple</div>
+										</label>
+									</li>
+									<li class="BrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">DEXP</div>
+										</label>
+									</li>
+								</ul>
+								<div class="ShowAllBrands ShowAllBrands--hide">Показать все</div>
+							</li>
+							<li class="Filter__item">
+								<div class="Filter__text">
+									<span data-filter="CupBrand">Производитель процессора</span>
+								</div>
+								<ul class="CupBrandList">
+									<li class="CupBrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">Intel</div>
+										</label>
+									</li>
+									<li class="CupBrandItem">
+										<label>
+											<input class="BrandCheckbox" type="checkbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">AMD</div>
+										</label>
+									</li>
+								</ul>
+							</li>
+							<li class="Filter__item">
+								<div class="Filter__text">
+									<span data-filter="CupQuantity">Кол-во ядер процессора</span>
+								</div>
+								<ul class="CupQuantityList">
+									<li class="CupQuantityItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">2</div>
+										</label>
+									</li>
+									<li class="CupQuantityItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">4</div>
+										</label>
+									</li>
+									<li class="CupQuantityItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">6</div>
+										</label>
+									</li>
+									<li class="CupQuantityItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">8</div>
+										</label>
+									</li>
+								</ul>
+							</li>
+							<li class="Filter__item">
+								<div class="Filter__text">
+									<span data-filter="RamQuantity">Размер оперативной памяти</span>
+								</div>
+								<ul class="RamQuantityList">
+									<li class="RamQuantityItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">2</div>
+										</label>
+									</li>
+									<li class="RamQuantityItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">4</div>
+										</label>
+									</li>
+									<li class="RamQuantityItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">8</div>
+										</label>
+									</li>
+									<li class="RamQuantityItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">16</div>
+										</label>
+									</li>
+									<li class="RamQuantityItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">32</div>
+										</label>
+									</li>
+								</ul>
+							</li>
+							<li class="Filter__item">
+								<div class="Filter__text">
+									<span data-filter="VideoType">Тип видеокарты</span>
+								</div>
+								<ul class="VideoTypeList">
+									<li class="VideoTypeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">Встроенная</div>
+										</label>
+									</li>
+									<li class="VideoTypeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">Дискретная</div>
+										</label>
+									</li>
+								</ul>
+							</li>
+							<li class="Filter__item">
+								<div class="Filter__text">
+									<span data-filter="HardSize">Объём жесткого диска</span>
+								</div>
+								<ul class="HardSizeList">
+									<li class="HardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">нет</div>
+										</label>
+									</li>
+									<li class="HardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">500</div>
+										</label>
+									</li>
+									<li class="HardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">1000</div>
+										</label>
+									</li>
+									<li class="HardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">2000</div>
+										</label>
+									</li>
+									<li class="HardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">3000</div>
+										</label>
+									</li>
+									<li class="HardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">4000</div>
+										</label>
+									</li>
+								</ul>
+							</li>
+							<li class="Filter__item">
+								<div class="Filter__text">
+									<span data-filter="SSDHardSize">Объём твердотельного накопителя</span>
+								</div>
+								<ul class="SSDHardSizeList">
+									<li class="SSDHardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">нет</div>
+										</label>
+									</li>
+									<li class="SSDHardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">120</div>
+										</label>
+									</li>
+									<li class="SSDHardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">128</div>
+										</label>
+									</li>
+									<li class="SSDHardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">240</div>
+										</label>
+									</li>
+									<li class="SSDHardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">250</div>
+										</label>
+									</li>
+									<li class="SSDHardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">256</div>
+										</label>
+									</li>
+									<li class="SSDHardSizeItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">512</div>
+										</label>
+									</li>
+								</ul>
+							</li>
+							<li class="Filter__item">
+								<div class="Filter__text">
+									<span data-filter="DVD">Оптический привод</span>
+								</div>
+								<ul class="DVDList">
+									<li class="DVDItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">нет</div>
+										</label>
+									</li>
+									<li class="DVDItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">DVD-RW</div>
+										</label>
+									</li>
+									<li class="DVDItem">
+										<label>
+											<input type="checkbox" class="BrandCheckbox">
+											<span class="CustomCheckbox"></span>
+											<div class="BrandName">DVD&plusmn;RW</div>
+										</label>
+									</li>
+								</ul>
+							</li>
+							<button type="submit" class="SearchBtn">
+								<span class="SearchBtn__text">Найти</span>
+							</button>
+						</ul>
+						<span class="Fitler__img"></span>
+					</div>
+					<div class="SearchResult">Найденно 20 результатов</div>
+					<div class="Sort">
+						<span class="Sort__text">Сортировка</span>
+						<span class="Sort__triangle"></span>
+						<ul class="Sort__list">
+							<li class="Sort__item">
+								<span>По новинкам</span>
+							</li>
+							<li class="Sort__item">
+								<span>По популярности</span>
+							</li>
+							<li class="Sort__item">
+								<span>По возрастающей цене</span>
+							</li>
+							<li class="Sort__item">
+								<span>По понижающей цене</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="CatalogList">
+					<li class="Catalog__item" id="1">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.1</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="2">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.2</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="3">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.3</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="4">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.4</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="5">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.5</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="6">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.6</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="7">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.7</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="8">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.8</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="9">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.9</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="10">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.10</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="11">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.11</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="12">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.12</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="13">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.13</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="14">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.14</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="15">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.15</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="16">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.16</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="17">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.17</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="18">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.18</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="19">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.19</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+					<li class="Catalog__item" id="20">
+						<div class="Catalog__item__overlay">
+							<div class="Item__view">
+								<img src="../img/misc/desktop_computer.png"></img>
+							</div>
+							<div class="Item__desc">Lorem ipsum dolor sit amet,consecteturadipisicingelit.20</div>
+							<div class="Item__price">1000 р</div>
+							<a href="product_card.html" class="Item__details">Подробнее</a>
+							<div class="Icons Icons--heart"></div>
+							<div class="Icons Icons--plus"></div>
+							<div class="WishText">Добавить в избранное</div>
+							<div class="CartText">Добавить в корзину</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="/js/plugins/JQuery.js"></script>
+	<script src="/js/common-min.js"></script>
+	<script src="/js/catalog-min.js"></script>
+</body>
+
+</html>

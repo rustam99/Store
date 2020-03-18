@@ -1,0 +1,29 @@
+@mixin margin-x ($margin-x) {
+  margin-left: $margin-x;
+  margin-right: $margin-x;
+}
+
+@mixin margin-y ($margin-y) {
+  margin-top: $margin-y;
+  margin-bottom: $margin-y;
+
+}
+
+@mixin padding-x ($padding-x) {
+  padding-left: $padding-x;
+  padding-right: $padding-x;
+}
+
+@mixin padding-y ($padding-y) {
+  padding-top: $padding-y;
+  padding-bottom: $padding-y;
+
+}
+
+%Clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

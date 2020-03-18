@@ -1,0 +1,17 @@
+{
+	"0": {
+		"img": "../img/misc/gilyazev.jpg",
+		"message": "Text",
+		"name": "Рустам"
+	},
+	"1": {
+		"img": "../img/misc/gilyazev.jpg",
+		"message": "Text2",
+		"name": "Рустам2"
+	},
+	"2": {
+		"img": "../img/misc/gilyazev.jpg",
+		"message": "Text3",
+		"name": "Рустам3"
+	}
+}

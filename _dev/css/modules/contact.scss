@@ -1,0 +1,131 @@
+.Contact {
+	background-color: $overlayColor;
+    text-align: center;
+    border-radius: 0 0 100px 100px;
+    padding: 0 0 50px 0;
+}
+.Contact__title {
+    color: $white;
+    font-size: 48px;
+    position: relative;
+    display: inline-block;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 500px;
+        height: 2px;
+        background-color: #c0b7e4;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &:before {
+        left: 100%;
+        margin-left: 20px;
+    }
+    &:after {
+        right: 100%;
+        margin-right: 20px;
+    }
+}
+
+.Contact__box {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+	padding: 40px;
+	border-width: 15px;
+	border-style: solid;
+	border-image: url(img/dest/contact__border.png) 16 round round;
+	height: 500px;
+	background-color: $black;
+	form {
+		width: 49%;
+		text-align: right;
+	}
+	.Name,
+	.Email,
+	.Subject,
+	.Message {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 20px;
+		label {
+			color: $white;
+			font-size: 18px;
+		}
+		input,
+		textarea {
+			width: 60%;
+			height: 40px;
+			border: 2px solid $white;
+			border-radius: 20px;
+			background: none;
+			color: $white;
+			font-size: 16px;
+			font-weight: bold;
+			padding: 0 20px;
+			outline: none;
+			&:hover,
+			&:focus {
+				border-color: $hoverColor;
+			}
+		}
+		textarea {
+			height: 200px;
+			resize: none;
+		}
+	}
+}
+
+.Contact__btn {
+	width: 150px;
+	height: 40px;
+	margin-top: 20px;
+	background: none;
+	border: 2px solid $white;
+	border-radius: 20px;
+	color: $white;
+	outline: none;
+	&:hover {
+		border-color: $hoverColor;
+	}
+}
+
+.Name {
+	margin-top: 0;
+}
+
+.Contact__desc {
+	width: 35%;
+	text-align: left;
+}
+
+.Contact__desc__Title {
+	color: $white;
+}
+
+.Contact__desc__List {
+	list-style-type: none;
+	border-bottom: 1px solid $white;
+	padding-bottom: 10px;
+	display: inline-block;
+}
+
+.Contact__desc__Item {
+	color: $white;
+	text-align: left;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.Phone__title,
+.Email__title {
+	color: $hoverColor;
+	margin-right: 10px;
+}
+
+.Contact__desc .SocialList {
+	margin-top: 15px;
+}

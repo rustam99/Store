@@ -1,0 +1,209 @@
+.test {
+	margin: 0 auto;
+	width: 100%;
+
+	& + & {
+		margin-top: 50px;
+	}
+
+	.Slider,
+	.Slider2 {
+		width: 100%;
+		position: relative;
+	}
+	
+	.Slider__list {
+		width: 100%;
+		position: relative;
+		list-style-type: none;
+	}
+	
+	.Slider__item {
+		display: block;
+	
+		&--hidden {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			visibility: hidden;
+		}
+	}
+	
+	.Slider__content {
+		img {
+			max-width: 100%;
+		}
+	}
+	
+	.Slider__dots {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		position: absolute;
+		bottom: 10px;
+		list-style-type: none;
+	}
+	
+	.Slider__dot {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 16px;
+		height: 16px;
+		padding: 10px;
+		border-radius: 50%;
+		position: relative;
+		cursor: pointer;
+		border: none;
+		background: none; // УПотом убрать
+	
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			transform-origin: center; 
+		}
+	
+		&:before {
+			box-shadow:
+				inset 0 2px 0 rgba(185, 16, 4, .6),
+				inset 0 4px 0 rgba(230, 94, 4, .6),
+				inset 0 -2px 0 rgba(216, 202, 8, .6),
+				inset 0 -4px 0 rgba(169, 212, 12, .6);
+		}
+	
+		&:after {
+			padding: 0; // УПотом убрать
+			margin: 0; // УПотом убрать
+			box-shadow:
+				inset 2px 0 0 rgba(8, 209, 132, .6),
+				inset 4px 0 0 rgba(4, 166, 230, .6),
+				inset -2px 0 0 rgba(161, 10, 231, .6),
+				inset -4px 0 0 rgba(238, 14, 81, .6);
+		}
+	
+		&:hover {
+			background: linear-gradient(45deg,
+				rgba(190, 171, 82, .753),
+				rgba(96, 184, 169, .596),
+				rgba(93, 197, 98, .575));
+		}
+	
+		&:active {
+			box-shadow: inset 0 0 10px #000;
+		}
+	
+		& + & {
+			margin-left: 10px;
+		}
+	
+		&--active {
+			background: linear-gradient(45deg,
+				rgba(190, 171, 82, .753),
+				rgba(96, 184, 169, .596),
+				rgba(93, 197, 98, .575));
+		
+			&:before {
+				animation: CircleAnimateY 4s linear infinite;
+			}
+	
+			&:after {
+				animation: CircleAnimateX 4s linear infinite;
+			}
+		}
+	}
+	
+	.Slider__arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 25px;
+		height: 50px;
+		border-radius: .1em;
+		cursor: pointer;
+		background: linear-gradient(45deg, #391cd2, #e3b411);
+	
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			border: 1px solid transparent;
+			border-top-color: #00ffea;
+			height: 15px;
+			width: 15px;
+		}
+	
+		&:hover {
+			&:after {
+				border-top-color: #d7b710;
+			}
+		}
+	
+		&--prev {
+			left: 20px;
+	
+			&:after {
+				right: 0;
+				border-left-color: #00ffea;
+				transform: translateY(-50%) rotate(-45deg);
+			}
+	
+			&:hover {
+				&:after {
+					border-left-color: #d7b710;
+				}
+			}
+		}
+	
+		&--next {
+			right: 20px;
+	
+			&:after {
+				left: 0;
+				border-right-color: #00ffea;
+				transform: translateY(-50%) rotate(45deg);
+			}
+	
+			&:hover {
+				&:after {
+					border-right-color: #d7b710;
+				}
+			}
+		}
+	}
+	
+	@keyframes CircleAnimateX {
+		0% {
+			transform: rotateZ(0deg) scaleX(1) scaleY(1);
+		}
+	
+		50% {
+			transform: rotateZ(180deg) scaleX(.95) scaleY(.95);
+		}
+	
+		100% {
+			transform: rotateZ(360deg) scaleX(1) scaleX(1);
+		}
+	}
+	
+	@keyframes CircleAnimateY {
+		0% {
+			transform: rotateZ(0deg) scaleX(1) scaleY(1);
+		}
+	
+		50% {
+			transform: rotateZ(-180deg) scaleX(.95) scaleY(.95);
+		}
+	
+		100% {
+			transform: rotateZ(-360deg) scaleX(1) scaleY(1);
+		}
+	}
+	
+}

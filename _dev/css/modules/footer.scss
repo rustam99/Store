@@ -1,0 +1,156 @@
+.Footer {
+	position: relative;
+	margin-top: -$Footer__height;
+}
+
+.Footer__advantages {
+	background-color: #262626;
+}
+
+.Advantages__list {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 80px 0;
+}
+
+.Advantages__item {
+	max-width: 240px;
+	position: relative;
+	&:first-child {
+		margin-left: 100px;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		margin-left: -101px;
+		width: 61px;
+		height: 67px;
+		background-image: url(img/dest/Footer__top__Icons__set.png);
+	}
+}
+
+.Delivery:before {
+	background-position-x: 0;
+}
+
+.Returns:before {
+	background-position-x: -65px;
+}
+
+.WhiteChose:before {
+	background-position-x: -130px;
+}
+
+.Advantages__title {
+	color: #fff;
+	line-height: 18px;
+}
+
+.Atvantages__desc {
+	color: #868380;
+	margin-top: 20px;
+	line-height: 22px;
+}
+
+.Footer__information {
+	background-color: #262626;
+	padding-bottom: 50px;
+}
+
+.Footer__information__Box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.Footer__information__Categories {
+	flex-basis: 520px;
+}
+
+.Footer__information__title,
+.Footer__information__About {
+	color: #fff;
+}
+
+.Categories__list {
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 600px;
+	justify-content: center;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	z-index: 100;
+}
+
+.Categories__item {
+	margin-top: 15px;
+	flex-basis: 150px;
+}
+
+.Item__link {
+	text-decoration: none;
+	color: #fff;
+	&:hover {
+		color: $hoverColor;
+	}
+}
+
+.About__list,
+.Contacts__list {
+	list-style-type: none;
+	text-align: center;
+}
+
+.About__item,
+.Contacts__item {
+	margin-top: 15px;
+}
+
+.Footer__bottom {
+	padding: 20px 0;
+	background-color: #262626;
+	border-top: 2px solid #ff974e;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.Copyright {
+	color: #fff;
+}
+
+.SocialList {
+	list-style-type: none;
+	display: flex;
+}
+
+.Social__item {
+	width: 30px;
+	height: 30px;
+	background-image: url(img/dest/Sicial__icons__set.png);
+	cursor: pointer;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.Social__item+.Social__item {
+	margin-left: 20px;
+}
+
+.vk {
+	background-position-x: 0;
+}
+
+.in {
+	background-position-x: -30px;
+}
+
+.tg {
+	background-position-x: -60px;
+}

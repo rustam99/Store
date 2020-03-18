@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Caveat';
+  src: local('Caveat'),
+  local('Caveat-Regular'),
+  url("Fonts/Caveat/Caveat-Regular.woff2") format('woff2'),
+  url("Fonts/Caveat/Caveat-Regular.woff") format('woff'),
+  url("Fonts/Caveat/Caveat-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src: local('Caveat'),
+  local('Caveat Bold'),
+  url("Fonts/Caveat/Caveat-Bold.woff2") format('woff2'),
+  url("Fonts/Caveat/Caveat-Bold.woff") format('woff'),
+  url("Fonts/Caveat/Caveat-Bold.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'EBGaramond';
+  src: local('EBGaramond'),
+  local('EBGaramond-Regular'),
+  url("Fonts/EB_Garamond/EBGaramond-Regular.woff2") format('woff2'),
+  url("Fonts/EB_Garamond/EBGaramond-Regular.woff") format('woff'),
+  url("Fonts/EB_Garamond/EBGaramond-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'EBGaramond';
+  src: local('EBGaramond'),
+  local('EBGaramond Bold'),
+  url("Fonts/EB_Garamond/EBGaramond-Bold.woff2") format('woff2'),
+  url("Fonts/EB_Garamond/EBGaramond-Bold.woff") format('woff'),
+  url("Fonts/EB_Garamond/EBGaramond-Bold.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+

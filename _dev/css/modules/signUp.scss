@@ -1,0 +1,85 @@
+.SignUp {
+	background-color: $overlayColor;
+    text-align: center;
+    border-radius: 0 0 100px 100px;
+	padding: 0 0 50px 0;
+	form {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	label {
+		font-size: 24px;
+	}
+}
+
+.SignUp__title {
+    color: $white;
+    font-size: 48px;
+    position: relative;
+    display: inline-block;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 500px;
+        height: 2px;
+        background-color: #c0b7e4;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &:before {
+        left: 100%;
+        margin-left: 20px;
+    }
+    &:after {
+        right: 100%;
+        margin-right: 20px;
+    }
+}
+
+.SignUp__name,
+.SignUp__surname,
+.SignUp__patronymic,
+.SignUp__email,
+.SignUp__tel,
+.SignUp__login,
+.SignUp__password {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.SignUp__input {
+	width: 35%;
+	height: 40px;
+	background: none;
+	border: 1px solid $white;
+	border-radius: 20px;
+	color: $white;
+	font-weight: bold;
+	padding: 0 20px;
+	font-size: 16px;
+	outline: none;
+	&:hover,
+	&:focus {
+		border-color: $hoverColor;
+	}
+}
+
+.SignUp__btn {
+	display: block;
+	width: 30%;
+	height: 40px;
+	margin: 20px auto 0 auto;
+	border: 1px solid $white;
+	border-radius: 20px;
+	background: none;
+	color: $white;
+	outline: none;
+	transition: all .2s;
+	&:hover {
+		border-color: $hoverColor;
+	}
+}

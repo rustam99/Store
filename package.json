@@ -1,0 +1,36 @@
+{
+  "name": "webstore",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rustam99/WebStore.git"
+  },
+  "author": "rustam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rustam99/WebStore/issues"
+  },
+  "homepage": "https://github.com/rustam99/WebStore#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@babel/preset-env": "^7.8.2",
+    "bower": "^1.8.8",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "imask": "^5.2.1"
+  }
+}

@@ -1,0 +1,242 @@
+.Checkout {
+	background-color: $overlayColor;
+	text-align: center;
+	border-radius: 0 0 100px 100px;
+	padding: 0 0 50px 0;
+
+	form {
+		max-width: 1000px;
+		margin: 30px auto 0 auto;
+	}
+
+	label {
+		font-size: 24px;
+	}
+}
+
+.Checkout__title {
+	color: $white;
+	font-size: 48px;
+	position: relative;
+	display: inline-block;
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 500px;
+		height: 2px;
+		background-color: #c0b7e4;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&:before {
+		left: 100%;
+		margin-left: 20px;
+	}
+	&:after {
+		right: 100%;
+		margin-right: 20px;
+	}
+}
+
+.Checkout__box {
+	margin-top: 50px;
+	border-radius: 10px 10px 100px 100px;
+}
+
+.Checkout__box__Title {
+	font-size: 36px;
+}
+
+.Checkout__email,
+.Checkout__tel,
+.Checkout__adress {
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Checkout__person {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.Checkout__name,
+.Checkout__surname {
+	width: 50%;
+	display: flex;
+	align-items: center;
+}
+
+.Checkout__name .Input__box,
+.Checkout__surname .Input__box {
+	margin-left: 50px;
+}
+
+.Checkout__name .Checkout__input,
+.Checkout__surname .Checkout__input {
+	width: 90%;
+}
+
+.Checkout__name {
+	text-align: left;
+}
+
+.Checkout__surname {
+	text-align: right;
+}
+
+.Input__box {
+	display: inline-block;
+	width: 70%;
+}
+
+.Checkout__input {
+	width: 94%;
+	height: 40px;
+	padding: 0 20px;
+	background: none;
+	border: 1px solid $white;
+	border-radius: 20px;
+	color: $white;
+	font-weight: bold;
+	font-size: 16px;
+	outline: none;
+	&:hover,
+	&:focus {
+		border-color: $hoverColor;
+	}
+	&--valid {
+		border-color: #2cec25;
+		box-shadow: 0 0 10px #2cec25;
+	}
+	&--invalid {
+		border-color: #cb370f;
+		box-shadow: 0 0 10px #cb370f;
+	}
+}
+
+.InvalidText {
+	margin-top: 10px;
+	padding: 5px;
+	border: 1px solid tan;
+	position: relative;
+	text-align: center;
+	color: tan;
+	display: none;
+	&:after,
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&:after {
+		border: 8px solid transparent;
+		border-bottom-color:#23446D;
+		margin-bottom: -2px;
+	}
+	&:before {
+		border: 8px solid transparent;
+		border-bottom-color: tan;
+	}
+}
+
+.Checkout__btn {
+	display: block;
+	width: 30%;
+	height: 40px;
+	margin: 20px auto 0 auto;
+	border: 1px solid $white;
+	border-radius: 20px;
+	background: none;
+	color: $white;
+	outline: none;
+	transition: all .2s;
+	&:hover {
+		border-color: $hoverColor;
+	}
+}
+
+.Order {
+	margin-top: 50px;
+
+	label {
+		font-size: 16px;
+	}
+
+	.Products {
+		border-bottom-width: 0;
+	}
+
+	.Product__summary__Title,
+	.Product__subtotal__Sum,
+	.Product__total__Sum,
+	.Product__ship__Box span {
+		color: $white;
+	}
+
+	.Product__total span {
+		color: $white;
+	}
+}
+
+.Order__quantity {
+	font-size: 24px;
+}
+
+.Product__desc__Price--bigFormat {
+	color: $white;
+}
+
+.Payment {
+	padding: 0 100px 100px 100px;
+}
+
+.Payment__box {
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+
+	label {
+		display: inline-flex;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	span {
+		font-size: 24px;
+		margin-left: 40px;
+	}
+
+	input {
+		display: none;
+	}
+
+	input:checked + .customRadio:after,
+	input:checked + .CustomCheckbox:after {
+		display: block;
+	}
+}
+
+.Payment__box + .Payment__box {
+	margin-top: 40px;
+}
+
+.Order__btn {
+	width: 150px;
+	height: 40px;
+	border: 2px solid $white;
+	background: none;
+	color: $white;
+	border-radius: 20px;
+	outline: none;
+	cursor: pointer;
+	transition: all .2s;
+	&:hover {
+		border-color: $hoverColor;
+	}
+}

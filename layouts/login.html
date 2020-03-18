@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Вход</title>
+	<link rel="shortcut icon" href="../img/ico/favication.ico">
+	<link rel="stylesheet" href="../style.min.css">
+</head>
+
+<body>
+	<div class="Wrapper">
+		<div class="Login">
+			<div class="Container">
+				<h1 class="Login__title">Вход</h1>
+				<div class="Login__box">
+					<div class="Login__form">
+						<h2 class="Login__form__Title">Вход в аккаунт</h2>
+						<form>
+							<div class="Login__email">
+								<input class="Login__input" type="text" placeholder="Email или Логин">
+							</div>
+							<div class="Login__password">
+								<input class="Login__input" type="text" placeholder="Пароль">
+							</div>
+							<label class="Login__remember">
+								<input type="checkbox">
+								<div class="CustomCheckbox"></div>
+								<span>Запомнить меня</span>
+							</label>
+							<button class="Login__btn" type="submit">Войти</button>
+						</form>
+						<div class="Login__forgot">
+							<span>Забыл</span>
+							<a class="Login__Link" href="#">Логин</a>
+							<span class="Separator">/</span>
+							<a class="Login__Link" href="#">Пароль</a>
+						</div>
+					</div>
+					<div class="Login__info">
+						<div class="Login__info__Box Login__info__Box--key">
+							<div class="Login__info__Title">Нету акааунта</div>
+							<a class="Login__Link" href="signUp.html">Зарегистрируйтесь</a>
+						</div>
+						<div class="Login__info__Box Login__info__Box--lock">
+							<div class="Login__info__Title">Забыли аккаунт</div>
+							<a class="Login__Link" href="">Логин</a>
+							<span class="Separator">/</span>
+							<a class="Login__Link" href="">Пароль</a>
+						</div>
+						<div class="Login__info__Box Login__info__Box--question">
+							<div class="Login__info__Title">Есть вопросы</div>
+							<a class="Login__Link" href="contact.html">Сообщите нам</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/js/plugins/JQuery.js"></script>
+	<script src="/js/login-min.js"></script>
+</body>
+
+</html>

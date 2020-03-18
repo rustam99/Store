@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="../img/ico/favication.ico">
+	<link rel="stylesheet" href="../style.min.css">
+	<title>Корзина</title>
+</head>
+
+<body>
+	<div class="Wrapper">
+		<div class="Cart">
+			<div class="Container">
+				<h1 class="Cart__title">Корзина</h1>
+				<div class="Cart__box">
+					<div class="Products">
+						<img class="EmptyCartImg" src="../img/dest/empty__cart.png" alt="emty__cart">
+						<h1 class="EmptyCartTitle">Ваша корзина пуста</h1>
+						<a class="EmptyCartLink" href="catalog.html">Перейти в каталог</a>
+					</div>
+					<div class="Product__Controls">
+						<div class="Product__cupon">
+							<input class="Product__cupon__Input" type="text" placeholder="Введите Rustam">
+							<div class="CuponNotice">
+								<span>Ваш купон составляет:</span>
+								<span class="Cupon__price"></span>
+								<span>Промежуточная стоимость товаров должна быть равна или больше.</span>
+							</div>
+							<button class="Product__cupon__Btn" type="submit">Применить</button>
+						</div>
+						<div class="Product__action">
+							<button class="CartUpdateBtn" type="submit">Обновить корзину</button>
+							<button class="ProductBuy" type="submit">Купить</button>
+						</div>
+					</div>
+					<div class="Product__summary">
+						<div class="Product__subtotal">
+							<h3 class="Product__summary__Title">Промежуточный итог:</h3>
+							<div class="Product__subtotal__Sum"></div>
+						</div>
+						<div class="Product__ship">
+							<h3 class="Product__summary__Title">Доставка:</h3>
+							<div class="Product__ship__Box">
+								<label>
+									<input type="radio" name="ship">
+									<div class="customRadio"></div>
+									<span>Доставка курьером: 100р</span>
+								</label>
+								<label>
+									<input type="radio" name="ship">
+									<div class="customRadio"></div>
+									<span>Самовызов</span>
+								</label>
+							</div>
+						</div>
+						<div class="Product__total">
+							<h3 class="Product__summary__Title">Итого:</h3>
+							<div class="Product__total__Sum"></div>
+							<span>Цена с купоном!!!</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/js/plugins/JQuery.js"></script>
+	<script src="/js/common-min.js"></script>
+	<script src="/js/cart-min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+.WishBox {
+	position: absolute;
+	right: 0;
+	padding: 20px;
+	width: 250px;
+	background-color: $overlayColor;
+	z-index: 1000;
+	display: none;
+
+	.Product__delete {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 15px;
+		margin-right: 15px;
+	}
+}
+
+.WishBox__title {
+	padding-bottom: 10px;
+	border-bottom: 2px solid $white;
+}
+
+.WishBox__list {
+	list-style-type: none;
+	margin-top: 20px;
+}
+
+.WishBox__item {
+	display: flex;
+	padding: 5px;
+	border-bottom: 2px solid $white;
+	position: relative;
+	cursor: pointer;
+	&:hover {
+		box-shadow: 0 0 3px $white;
+	}
+
+	.Product__delete {
+		right: 100%;
+		margin-top: 0;
+		margin-right: 7px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.WishBox__item + .WishBox__item {
+	margin-top: 30px;
+}
+
+.WishBox__item__Img {
+	img {
+		max-width: 100px;
+	}
+}
+
+.WishBox__item__Desc {
+	margin-left: 10px;
+}
+
+.WishBox__item__Title {
+	font-size: 20px;
+}
+
+.WishBox__item__Price {
+	margin-top: 10px;
+	color: #bdc3c7;
+}
+
+.WishBox__item__Stoke {
+	color: #43cc64;
+	margin-top: 10px;
+}
+
+.PopularItems,
+.NewItems {
+	margin-top: 20px;
+	.CatalogList {
+		margin-top: 0;
+	}
+}
+
+.PopularItems__title,
+.NewsItems__title {
+	text-align: center;
+	color: $black;
+}

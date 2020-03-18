@@ -1,0 +1,584 @@
+.Catalog {
+	background-color: $overlayColor;
+	border-radius: 0 0 100px 100px;
+}
+
+.Catalog__title {
+	color: #fff;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.Catalog__controlers {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.Catalog__filter,
+.Sort {
+	position: relative;
+	width: 170px;
+	height: 35px;
+	padding: 0 20px;
+	border: 2px solid #c0b7e4;
+	text-align: justify;
+	color: #fff;
+	line-height: 35px;
+	border-radius: 20px;
+	cursor: pointer;
+
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+.Fitler__img {
+	display: inline-block;
+	position: relative;
+	border-bottom: 2px solid #c0b7e4;
+	width: 12px;
+	height: 8px;
+
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		left: 0;
+		height: 2px;
+		background-color: #c0b7e4;
+	}
+
+	&:before {
+		top: 0;
+	}
+
+	&:after {
+		top: 50%;
+	}
+}
+
+.Filter__list,
+.Sort__list {
+	list-style-type: none;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	margin-left: 21px;
+	margin-top: 10px;
+	background-color: rgba(129, 111, 201, 0.6);
+	min-width: 309px;
+	z-index: 1000;
+
+	& .Filter__text span,
+	& .Sort__item span {
+		padding-bottom: 5px;
+		border-bottom: 2px dotted #fff;
+	}
+
+	display: none;
+}
+
+.Filter__list {
+	border-radius: 10px 20px 20px 10px;
+}
+
+.Sort__list {
+	right: 0;
+	left: auto;
+	margin-left: 0;
+	border-radius: 20px 10px 10px 20px;
+}
+
+.Filter__item,
+.Sort__item {
+	padding: 2px 10px;
+	font-weight: bold;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 40%, rgba(129, 111, 201, 0.6));
+	border-radius: 10px 20px 20px 10px;
+	box-shadow: 0 0 2px #fff;
+	transition: color, border, 0.2s;
+	animation: ToggleBoxShadow 2s linear alternate infinite;
+
+	.Filter__text--active span {
+		color: $black;
+		border-bottom-color: $black;
+	}
+
+	&:hover {
+		.Filter__text span {
+			color: $black;
+			border-bottom-color: $black;
+		}
+	}
+}
+
+.Filter__item .CustomCheckbox {
+	border-color: $black;
+
+	&--first {
+		border-color: $black;
+	}
+}
+
+.Sort__item {
+	border-radius: 20px 10px 10px 20px;
+	text-align: right;
+
+	&:hover span {
+		color: $black;
+		border-bottom-color: $black;
+	}
+}
+
+.PriceSettings {
+	display: none;
+	justify-content: space-between;
+	position: relative;
+}
+
+.PriceFrom,
+.PriceTo {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+
+	label {
+		cursor: pointer;
+		color: $black;
+		line-height: 1;
+	}
+}
+
+.PriceInput {
+	max-width: 100px;
+	max-height: 20px;
+	margin-left: 10px;
+	border: none;
+	background: linear-gradient(90deg, rgb(255, 151, 78), rgb(33, 123, 213));
+	outline: none;
+	box-shadow: 0 0 3px #fff;
+}
+
+.PriceInput::-webkit-outer-spin-button,
+.PriceInput::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+.PriceInput {
+	-moz-appearance: textfield;
+}
+
+.PriceRange {
+	height: 4px;
+	width: 200px;
+	margin: 10px 0;
+	margin-top: 40px;
+	background-color: rgb(33, 123, 213);
+	border-radius: 2px;
+	position: relative;
+	display: none;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		height: 56px;
+		width: 100%;
+		left: 0;
+		margin-top: -40px;
+	}
+
+	.PriceCircle {
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: rgb(255, 151, 78);
+	}
+
+	.currentPrice {
+		position: absolute;
+		top: 0;
+		left: -50%;
+		margin-top: -20px;
+		line-height: 1;
+		color: $black;
+	}
+
+	.maxPrice {
+		color: $black;
+		position: absolute;
+		right: 0;
+		margin-right: -10px;
+		transform: translateX(100%);
+		margin-top: -6px;
+		line-height: 1;
+	}
+}
+
+.BrandList,
+.BrandList--hide,
+.CupBrandList,
+.CupQuantityList,
+.RamQuantityList,
+.VideoTypeList,
+.HardSizeList,
+.SSDHardSizeList,
+.DVDList {
+	list-style-type: none;
+	cursor: default;
+	display: none;
+}
+
+.BrandItem,
+.CupBrandItem,
+.CupQuantityItem,
+.RamQuantityItem,
+.VideoTypeItem,
+.HardSizeItem,
+.SSDHardSizeItem,
+.DVDItem {
+	color: $black;
+
+	label {
+		display: inline-block;
+		cursor: pointer;
+
+		div {
+			display: inline-block;
+		}
+
+		&:hover {
+			color: rgb(255, 151, 78);
+		}
+	}
+}
+
+.BrandCheckbox,
+.BrandCheckbox--first {
+	display: none;
+}
+
+.CupBrandList .BrandCheckbox:checked + .CustomCheckbox:after,
+.CupQuantityList .BrandCheckbox:checked + .CustomCheckbox:after,
+.RamQuantityList .BrandCheckbox:checked + .CustomCheckbox:after,
+.VideoTypeList .BrandCheckbox:checked + .CustomCheckbox:after,
+.HardSizeList .BrandCheckbox:checked + .CustomCheckbox:after,
+.SSDHardSizeList .BrandCheckbox:checked + .CustomCheckbox:after,
+.DVDList .BrandCheckbox:checked + .CustomCheckbox:after {
+	display: block;
+}
+
+.CustomCheckbox,
+.CustomCheckbox--first {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border: 1px solid $white;
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 8px;
+		height: 8px;
+		background-color: $white;
+		display: none;
+	}
+
+	&--active {
+		&:after {
+			display: block;
+		}
+	}
+}
+
+.ShowAllBrands {
+	color: $black;
+	border-bottom: 2px dotted $black;
+	padding-bottom: 5px;
+	line-height: 1;
+	display: inline-block;
+	cursor: pointer;
+
+	&--hide {
+		display: none;
+	}
+
+	&:hover {
+		color: rgb(255, 151, 78);
+		border-bottom-color: rgb(255, 151, 78);
+	}
+}
+
+@keyframes ToggleBoxShadow {
+	0% {
+		box-shadow: 0 0 2px #fff;
+	}
+	50% {
+		box-shadow: 0 0 3px #fff;
+	}
+	100% {
+		box-shadow: 0 0 4px #fff;
+	}
+}
+
+.Filter__item + .Filter__item,
+.Sort__item + .Sort__item {
+	margin-top: 15px;
+}
+
+.SearchBtn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 40%, rgba(129, 111, 201, 0.6));
+	border: none;
+	border-radius: 0 20px 20px 0;
+	box-shadow: 1px 0 2px #fff;
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+	transition: box-shadow 0.3s;
+
+	span {
+		padding: 0 5px;
+		writing-mode: vertical-lr;
+		font-size: 18px;
+		font-weight: normal;
+		line-height: 1;
+		color: #fff;
+		transition: color 0.3s;
+	}
+
+	&:hover {
+		box-shadow: 1px 0 2px $black;
+
+		span {
+			color: $black;
+		}
+	}
+}
+
+.Sort__triangle {
+	display: inline-block;
+	position: relative;
+	width: 10px;
+	height: 10px;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		margin-top: 3px;
+		border: 5px solid transparent;
+		border-top-color: #c0b7e4;
+	}
+}
+
+.SearchResult {
+	color: #fff;
+}
+
+.CatalogList {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 60px;
+}
+
+.Catalog__item {
+	background: linear-gradient(45deg, #ff974e, #816fc9, #00a7ee);
+	box-shadow: 0 0 5px $white;
+	margin: 15px;
+	flex-basis: 270px;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	transition: box-shadow 0.2s;
+
+	&:hover {
+		box-shadow: 0 0 10px #fff;
+		.Item__desc {
+			color: $white;
+		}
+
+		.Item__details {
+			display: block;
+		}
+
+		.Catalog__item__overlay {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		.Icons {
+			display: block;
+		}
+	}
+}
+
+.Catalog__item__overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.Icons {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: rgba(179, 211, 231, 0.8);
+	top: 50%;
+	transform: translateY(-50%);
+	display: none;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 50px;
+		height: 50px;
+		background-image: url(img/dest/product__hover__icons.png);
+	}
+
+	&:hover {
+		box-shadow: 0 0 15px $white;
+	}
+
+	&:active {
+		box-shadow: inset 0 0 15px $black;
+	}
+}
+
+.Item__details {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 10px;
+	background-color: rgba(179, 211, 231, 0.8);
+	color: $black;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 0 0 10px 10px;
+	display: none;
+	&:hover {
+		box-shadow: 0 0 5px $white;
+	}
+	&:active {
+		box-shadow: inset 0 0 5px $black;
+	}
+}
+
+.Icons--heart {
+	left: 0;
+	margin-left: 20px;
+}
+
+.Icons--plus {
+	right: 0;
+	margin-right: 20px;
+
+	&:after {
+		background-position-x: -52px;
+	}
+}
+
+.Icons--heartActive {
+	left: 0;
+	margin-left: 20px;
+	&:after {
+		background-position-x: -104px;
+	}
+}
+
+.Icons--plusActive {
+	right: 0;
+	margin-right: 20px;
+	&:after {
+		background-position-x: -157px;
+	}
+}
+
+.Icons--heart:hover + div + .WishText,
+.Icons--plus:hover + div + .CartText,
+.Icons--heartActive:hover + div + .WishText,
+.Icons--plusActive:hover + div + .CartText {
+	display: block;
+}
+
+.WishText,
+.CartText {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-top: 90px;
+	height: 50px;
+	width: 100%;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 50px;
+	background-color: $overlayColor;
+	display: none;
+	&:hover {
+		display: block;
+		cursor: default;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		margin-left: 56px;
+		bottom: 100%;
+		border: 14px solid transparent;
+		border-bottom-color: $overlayColor;
+	}
+}
+
+.CartText:before {
+	right: 0;
+	left: auto;
+	margin-right: 56px;
+}
+
+.Item__view {
+	display: inline-block;
+	height: 270px;
+	width: 100%;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.Item__desc {
+	font-family: "Caveat", Arial, sans-serif;
+	font-size: 20px;
+}
+
+.Item__price {
+	color: #bdc3c7;
+	padding: 20px 0;
+}

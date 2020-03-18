@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Покупка</title>
+	<link rel="shortcut icon" href="../img/ico/favication.ico">
+	<link rel="stylesheet" href="../style.min.css">
+</head>
+
+<body>
+	<div class="Wrapper">
+		<div class="Checkout">
+			<div class="Container">
+				<h1 class="Checkout__title">Покупка</h1>
+				<div class="Checkout__box">
+					<h2 class="Checkout__box__Title">Платежные данные</h2>
+					<form class="Checkout__form">
+						<div class="Checkout__person">
+							<div class="Checkout__name">
+								<label for="name">Имя</label>
+								<div class="Input__box">
+									<input class="Checkout__input" id="name" type="text">
+									<div class="InvalidText"></div>
+								</div>
+							</div>
+							<div class="Checkout__surname">
+								<label for="surname">Фамилия</label>
+								<div class="Input__box">
+									<input class="Checkout__input" id="surname" type="text">
+									<div class="InvalidText"></div>
+								</div>
+							</div>
+						</div>
+						<div class="Checkout__email">
+							<label for="email">Email</label>
+							<div class="Input__box">
+								<input class="Checkout__input" id="email" type="text" placeholder="example@gmail.com">
+								<div class="InvalidText"></div>
+							</div>
+						</div>
+						<div class="Checkout__tel">
+							<label for="tel">Номер телефона</label>
+							<div class="Input__box">
+								<input class="Checkout__input" id="tel" type="tel" placeholder="8 (---) ---_--_--">
+								<div class="InvalidText"></div>
+							</div>
+						</div>
+						<div class="Checkout__adress">
+							<label for="tel">Адресс доставки</label>
+							<div class="Input__box">
+								<input class="Checkout__input" id="adress" type="text" placeholder="г.Москва, ул.Ленина, д.-1, кв.-1">
+								<div class="InvalidText"></div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="Order">
+					<h1 class="Order__title">Ваш заказ</h1>
+					<div class="Products"></div>
+					<div class="Product__summary">
+						<div class="Product__subtotal">
+							<h3 class="Product__summary__Title">Промежуточный итог:</h3>
+							<div class="Product__subtotal__Sum"></div>
+						</div>
+						<div class="Product__ship">
+							<h3 class="Product__summary__Title">Доставка:</h3>
+							<div class="Product__ship__Box">
+								<label>
+									<span></span>
+								</label>
+							</div>
+						</div>
+						<div class="Product__total">
+							<h3 class="Product__summary__Title">Итого:</h3>
+							<div class="Product__total__Sum">1000р</div>
+							<span>Цена с купоном!!!</span>
+						</div>
+					</div>
+					<div class="Payment">
+						<h1 class="Payment__title">Выбор платежа</h1>
+						<div class="Payment__box">
+							<label>
+								<input type="radio" name="ship">
+								<div class="customRadio"></div>
+								<span>Сбербанк онлайн</span>
+							</label>
+						</div>
+						<div class="Payment__box">
+							<label>
+								<input type="radio" name="ship">
+								<div class="customRadio"></div>
+								<span>Яндекс деньги</span>
+							</label>
+						</div>
+						<div class="Payment__box">
+							<label class="Payment__box">
+								<input type="radio" name="ship">
+								<div class="customRadio"></div>
+								<span>PayPal</span>
+							</label>
+						</div>
+						<div class="Payment__box">
+							<label class="Payment__box">
+								<input type="radio" name="ship">
+								<div class="customRadio"></div>
+								<span>WebMoney</span>
+							</label>
+						</div>
+						<div class="Payment__box">
+							<label class="conditions">
+								<input type="checkbox">
+								<div class="CustomCheckbox"></div>
+								<span>Я прочитал и прнимаю условия там там там..</span>
+							</label>
+							<button class="Order__btn" type="submit">Заказать</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/js/plugins/JQuery.js"></script>
+	<script src="/js/plugins/imask.js"></script>
+	<script src="/js/checkout-min.js"></script>
+</body>
+
+</html>
