@@ -161,6 +161,7 @@ $(document).ready(function () {
 				var self = $(this);
 
 				setInterval(() => {
+
 					if (sliderMoveFlags[slides[i]]) {
 						slides[i]++;
 
@@ -177,7 +178,6 @@ $(document).ready(function () {
 
 		function sliderMove(index, container, direction) {
 			sliderMoveFlags[index] = false;
-
 			var targetItem = container
 				.find('.Slider__item')
 				.eq(index);
